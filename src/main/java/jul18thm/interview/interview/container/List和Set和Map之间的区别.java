@@ -51,8 +51,7 @@ public class List和Set和Map之间的区别 {
          * -217105888
          * 元素在set中的位置是由元素的hashCode决定的,所以打印结果是[String5, String4, String3, String2, String1]
          */
-        set.forEach(e-> System.out.println(e.hashCode()));
-
+        set.forEach(e -> System.out.println(e.hashCode()));
 
 
         /**
@@ -61,23 +60,20 @@ public class List和Set和Map之间的区别 {
          *      Map中数据以键值对形式存放，并且无序，key值不可以重复，value值可以重复
          *      key值只允许一个null值，value值不限制
          */
-        Map<String,String> map = new HashMap(5);
-        map.put("one","one");
-        map.put("two","two");
-        map.put("three","three");
-        map.put("three","three");
-        map.put("Three","three");
+        Map<String, String> map = new HashMap(5);
+        map.put("one", "one");
+        map.put("two", "two");
+        map.put("three", "three");
+        map.put("three", "three");
+        map.put("Three", "three");
         /*
          * map的打印结果为{two=two, three=three, Three=three, one=one}，并不与键值对插入顺序相同，所以map内元素是无序的
          * 一共插入了5组键值对，但是打印出来只有4对，说明了，key值不可以重复，打印结果中不同key值的value值存在重复，说明value值可以重复
          * 向HashMap中插入键值对，键值对是无序插入的，想保持键值对插入顺序需要使用LinkedHashMap，想要键值对根据key值保持自然顺序，则需要使用TreeSet
          */
         System.out.println(map);
-        // 打印map中的key值
-        for (Map.Entry<String,String> entry :map.entrySet()) {
-            System.out.println(entry.getKey().hashCode() + " " + entry.getKey());
-        }
-
+        // 打印map中的key值的hashCode
+        map.forEach((key, value) -> System.out.println("key值对应的hashCode为：" + key.hashCode()));
     }
 
 }
