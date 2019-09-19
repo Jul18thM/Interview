@@ -18,19 +18,19 @@ public class ArrayList和LinkedList的区别 {
          */
         ArrayList arrayList = new ArrayList();
         LinkedList linkedList = new LinkedList();
-//        for (int i = 0; i < 100; i++) {
-//            new Thread(new Runnable() {
-//                @Override
-//                public void run() {
-//                    for (int j = 0; j < 1000; j++) {
-//                        arrayList.add(j);
-//                        linkedList.add(j);
-//                        System.out.println("ArrayList的长度为：" + arrayList.size());
-//                        System.out.println("LinkedList的长度为：" + linkedList.size());
-//                    }
-//                }
-//            }).start();
-//        }
+        for (int i = 0; i < 100; i++) {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    for (int j = 0; j < 1000; j++) {
+                        arrayList.add(j);
+                        linkedList.add(j);
+                        System.out.println("ArrayList的长度为：" + arrayList.size());
+                        System.out.println("LinkedList的长度为：" + linkedList.size());
+                    }
+                }
+            }).start();
+        }
 
 
         /*
