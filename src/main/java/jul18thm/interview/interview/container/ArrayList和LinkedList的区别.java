@@ -34,7 +34,7 @@ public class ArrayList和LinkedList的区别 {
 
 
         /*
-         * ArrayList是一个可改变大小的数组，在大批量数据的get和set中上效率高于LinkedList
+         * ArrayList是一个可改变大小的数组，在大批量数据的get上效率高于LinkedList
          */
         ArrayList arrayList1 = new ArrayList();
         LinkedList linkedList1 = new LinkedList();
@@ -61,7 +61,7 @@ public class ArrayList和LinkedList的区别 {
         System.out.println("获取10000个LinkedList中元素耗时：" + (end - start));
 
         /*
-         * LinkedList是一个链表，在删除元素的性能上优于ArrayList，在add和get上弱于ArrayList；
+         * LinkedList是一个链表，在删除元素和添加元素的性能上优于ArrayList，在get上弱于ArrayList；
          */
 
         start = System.currentTimeMillis();
